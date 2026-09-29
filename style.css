@@ -1,3 +1,59 @@
-p{
-    color:green;
+h1 {
+    font-size: 30px;
+    text-transform: uppercase;
 }
+
+p::first-letter{
+    text-transform: uppercase;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+h1, 
+h2,
+h3, 
+h4,
+h5,
+h6{
+    text-align: center;
+}
+
+#primary-list {
+    list-style: none;
+    text-align: center;
+}
+
+img{
+ display: block;
+ margin: auto;
+ max-width: 150px;   
+}
+
+.banner{
+    height: 300px;
+    width: 300px;
+    background-image: url();
+    background-repeat: no-repeat;
+}
+
+.hide{
+    display: none;
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+body {
+    padding: 20px;
+    margin: 20px;
+}
+
+a:hover{
+    opacity: 0.5;
+}
+
