@@ -34,7 +34,7 @@ img{
 .banner{
     height: 300px;
     width: 300px;
-    background-image: url();
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdckeRGFRW-WwVGTIKwSIsJxXl0j7SDWuqlUs9_I9NKfyki4SPyuQ-XPhH&s=10);
     background-repeat: no-repeat;
 }
 
@@ -55,5 +55,83 @@ body {
 
 a:hover{
     opacity: 0.5;
+}
+
+@media print{
+.header,
+.footer{
+    display: none;
+}
+}
+
+.footer{
+    padding: 20px;
+    background-color: #607D8B;
+}
+
+.products-list,
+.products-list li {
+    display: grid;
+}
+
+.products-list{
+    padding: 20px;
+}
+
+.procut {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.products-list{
+    padding: 20px;
+    gap: 10px 20px;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: stretch;
+    align-content: center;
+    overflow: hidden;
+    grid-template-areas: "product3 . product1" ". product2 ";
+}
+
+@media (max-width: 1024) {
+    .products-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-list{ 
+        grid-template-columns: 1fr;
+    }
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 10px;
+    background-color: darkkhaki;
+    width: 100%;
+}
+
+.header .nav{
+    text-align: center;
+}
+
+.header .nav li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+body { 
+    margin: 0;
+}
+
+main{
+    padding: 20px;
 }
 
