@@ -1,137 +1,186 @@
+body {
+  padding: 20px;
+  margin: 20px;
+}
+
 h1 {
-    font-size: 30px;
-    text-transform: uppercase;
+  text-transform: uppercase;
+  font-size: 30px;
 }
 
-p::first-letter{
-    text-transform: uppercase;
+p::first-letter {
+  text-transform: uppercase;
 }
 
-a:hover{
-    text-decoration: none;
+a:hover {
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.8s ease;
 }
 
-h1, 
+img:hover {
+  opacity: 0.5;
+  transition: opacity 0.8s ease;
+  transform: scale(1.2);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
 h2,
-h3, 
+h3,
 h4,
 h5,
-h6{
-    text-align: center;
+h6 {
+  text-align: center;
 }
 
 #primary-list {
-    list-style: none;
-    text-align: center;
+  list-style: none;
+  text-align: center;
 }
 
-img{
- display: block;
- margin: auto;
- max-width: 150px;   
-}
-
-.banner{
-    height: 300px;
-    width: 300px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdckeRGFRW-WwVGTIKwSIsJxXl0j7SDWuqlUs9_I9NKfyki4SPyuQ-XPhH&s=10);
-    background-repeat: no-repeat;
-}
-
-.hide{
-    display: none;
-}
-
-.nav{
-    position: sticky;
-    top: 0;
-    z-index: 3;
+img {
+  display: block;
+  margin: auto;
+  max-width: 150px;
 }
 
 body {
-    padding: 20px;
-    margin: 20px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
 }
 
-a:hover{
-    opacity: 0.5;
+.banner {
+  height: 80px;
+  padding: 40px;
+  background-image: url("./images/90278.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: black;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-seri;
 }
 
-@media print{
-.header,
-.footer{
-    display: none;
-}
+.text-banner {
+  font-size: 25px;
 }
 
-.footer{
-    padding: 20px;
-    background-color: #607D8B;
+.hide {
+  display: none;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 10px;
+  background-color: darkkhaki;
+  width: 100%;
+}
+
+.header .nav {
+  text-align: center;
+}
+
+.header .nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
 }
 
 .products-list,
 .products-list li {
-    display: grid;
+  display: grid;
 }
 
-.products-list{
-    padding: 20px;
+.products-list {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px 20px;
+  grid-auto-flow: row;
+  padding: 20px;
+  justify-items: center;
+  align-items: stretch;
+  align-content: center;
+  overflow: hidden;
+  grid-template-areas: "product3 . product1" ". product2 .";
 }
 
-.procut {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
+.product-1 {
+  grid-area: product1;
 }
 
-.products-list{
-    padding: 20px;
-    gap: 10px 20px;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    align-items: stretch;
-    align-content: center;
-    overflow: hidden;
-    grid-template-areas: "product3 . product1" ". product2 ";
+.product-2 {
+  grid-area: product2;
 }
 
-@media (max-width: 1024) {
-    .products-list {
-        grid-template-columns: 1fr 1fr;
-    }
+.product-3 {
+  grid-area: product3;
+}
+
+.product {
+  text-align: center;
+  border: 1px solid #ccc;
+  flex-basis: 30%;
+  padding: 10px;
+}
+
+.product img {
+  max-width: 100%;
+  max-height: 150px;
+}
+
+@media print {
+  .header,
+  .footer {
+    display: none;
+  }
+}
+
+.footer {
+  padding: 20px;
+  background-color: #607d8b;
+}
+
+@media (max-width: 1024px) {
+  .products-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: none;
+  }
 }
 
 @media (max-width: 768px) {
-    .products-list{ 
-        grid-template-columns: 1fr;
-    }
+  .products-list {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
 }
 
-.header{
-    position: sticky;
-    top: 0;
-    z-index: 3;
-    padding: 10px;
-    background-color: darkkhaki;
-    width: 100%;
+div {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
-.header .nav{
-    text-align: center;
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
-.header .nav li{
-    display: inline-block;
-    margin-right: 10px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
-body { 
-    margin: 0;
-}
-
-main{
-    padding: 20px;
-}
-

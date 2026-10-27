@@ -4,35 +4,89 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vendas de TVs</title>
+    <title>Vendas de acessórios para TVs</title>
     <meta name="description" content="Loja online de TVs e acessórios com os melhores preços.">
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="page-category-acessories">
-    <header class="header"> 
-        <nav>
-    <h1>Catalogo</h1>    
-    
-    <main>
-        <h1>Categoria de Acessórios</h1>
-        <ul>
-            <li>
-            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_881436-MLA95656585394_102025-F.webp" alt="Imagem de Suporte Slim para TV Samsung" width="250" />
-            <h3>Suporte Slim para TV Samsung</h3>
-            <h4>A vista por R$ 559,00</h4>
-            <h5>Parcelado por 588,42</h5>
-            <a href=""></a>
-        </li>
-        <li>
-            <img src="https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/168984" alt="Imagem de televisão LG">
-            <h3>Marca: LG</h3>
-            <h4>R$  5.000,00</h4>
-            <h5>R$ 500,00 em 10x</h5>
-            <a target="_blank" href="https://www.lg.com/br/tvs-e-soundbars/qned-evo/">Detalhes</a>
-        </li>
-    </ul>
-    </main>
-    </nav>
+    <header class="header">
+        <p>Venda de TVs e acessórios online</p>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TVs</a></li>
+                <li><a href="#">Acessórios</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <main>
+        <h1>CATEGORIA DE PRODUTOS</h1>
+        <h2>Acessórios para TVs</h2>
+        <p>Acessórios disponíveis</p>
+        <p>Confira preços e condições de parcelamento</p>
+
+        <ul class="products-list">
+            <!-- Produto 1: ELG -->
+            <li class="product">
+                <picture>
+                    <source srcset="https://http2.mlstatic.com/D_NQ_NP_2X_888589-MLB102312147541_122025-F-suporte-de-tvs-movel-articulado-para-parede-15--a-58--elg.webp" media="(max-width: 768px)" />
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_888589-MLB102312147541_122025-F-suporte-de-tvs-movel-articulado-para-parede-15--a-58--elg.webp" alt="Imagem de suporte para televisão marca ELG" width="150" />
+                </picture>
+                <h3>ELG</h3>
+                <p>Suporte articulado para parede</p>
+                <p><strong>Preço:</strong> R$ 120,00</p>
+                <p><strong>Parcelamento:</strong> R$ 60,00 em 2x</p>
+                <a href="https://www.mercadolivre.com.br/suporte-de-tvs-movel-articulado-para-parede-15--a-58--elg/up/MLBU3698433426" target="_blank" rel="noopener noreferrer">Detalhes</a>
+            </li>
+
+            <!-- Produto 2: Brasforma -->
+            <li class="product">
+                <picture>
+                    <source srcset="https://http2.mlstatic.com/D_NQ_NP_2X_857055-MLB89235006860_082025-F-suporte-para-tv-10--a-60--articulado--bra40.webp" media="(max-width: 768px)" />
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_857055-MLB89235006860_082025-F-suporte-para-tv-10--a-60--articulado--bra40.webp" alt="Imagem de suporte para televisão marca Brasforma" width="150" />
+                </picture>
+                <h3>Brasforma</h3>
+                <p>Suporte articulado BRA40</p>
+                <p><strong>Preço:</strong> R$ 160,00</p>
+                <p><strong>Parcelamento:</strong> R$ 80,00 em 2x</p>
+                <a href="https://www.mercadolivre.com.br/suporte-para-tv-10--a-60--articulado--bra40/up/MLBU2319276336" target="_blank" rel="noopener noreferrer">Detalhes</a>
+            </li>
+        </ul>
+    </main>
+
+    <form id="accessory-request-form">
+        <fieldset>
+            <legend>Solicitar informações sobre Acessórios</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Anthonela Ramos" autocomplete="name" required />
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" autocomplete="email" required />
+            
+            <label for="modelo">Acessório desejado:</label>
+            <input list="modelos-acessorios" id="modelo" name="modelo" placeholder="Escolha ou digite a marca" required />
+            <datalist id="modelos-acessorios">
+                <option value="ELG">
+                <option value="Brasforma">
+            </datalist>
+
+            <button type="reset">Limpar formulário</button>
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+    <details>
+        <summary>Informações adicionais</summary>
+        <p>Preencha o formulário acima para receber informações sobre os acessórios disponíveis em nossa loja. Entraremos em contato com você o mais breve possível.</p>
+    </details>
 </body>
+
+<footer class="site-footer">
+        <p> 2026 Vendas de TVs e Acessórios. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+
+</html>

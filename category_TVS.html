@@ -4,32 +4,89 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vendas de TVs e acessórios online</title>
+    <title>Vendas de TVs</title>
     <meta name="description" content="Loja online de TVs e acessórios com os melhores preços.">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="page-category-tvs">
-    <header class="nav">
-   <p>Venda de TVs e Acessórios online</p>
-   <nav class="nav">
-    <ol id="primary-list">
-        <li>
-            <img src="https://tse4.mm.bing.net/th/id/OIP.SVVt5vRYg3xb-NjAYY3M-QHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagem de televisão marca samsung" width="250" />
-            <h3>Marca: Samsung</h3>
-            <h4>R$ 2.000,00</h4>
-            <h5>R$200,00 em 10x</h5>
-            <a href="">Detalhes</a>
-        </li>
-        <li>
-            <img src="https://www.lg.com/content/dam/channel/wcms/in/images/tvs/32lr686bpsa_atr_eail_in_c/gallery/new/32LR686BPSA-DZ-1.jpg/_jcr_content/renditions/thum-1600x1062.jpeg" alt="Imagem de televisão marca LG" width="250" />
-            <h3>Marca: LG</h3>
-            <h4>R$ 5.000,00</h4>
-            <h5>R$ 500,00 em 10x</h5>
-            <a href="">Detalhes</a>
-        </li>
-    </ol>
-   </nav> 
-</header>
+    <header class="header">
+        <p>Venda de TVs e acessórios online</p>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TVs</a></li>
+                <li><a href="#">Acessórios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>CATEGORIA DE PRODUTOS</h1>
+        <h2>TVs</h2>
+        <p>TVs disponíveis</p>
+        <p>Confira preços e condições de parcelamento</p>
+
+        <ul class="products-list">
+            <!-- Produto 1: Samsung -->
+            <li class="product">
+                <picture>
+                    <source srcset="https://i5.walmartimages.com/seo/Samsung-55-Class-Crystal-UHD-U7900F-4K-Smart-TV-2025-UN55U7900FFXZA_7e51eab2-91df-4a0c-9014-9b5298cfb839.088834c72013eb53ce50d2a51727740f.jpeg" media="(max-width: 768px)" />
+                    <img src="https://i5.walmartimages.com/seo/Samsung-55-Class-Crystal-UHD-U7900F-4K-Smart-TV-2025-UN55U7900FFXZA_7e51eab2-91df-4a0c-9014-9b5298cfb839.088834c72013eb53ce50d2a51727740f.jpeg" alt="Imagem de televisão marca samsung" width="150" />
+                </picture>
+                <h3>Samsung</h3>
+                <p>TV Samsung Smart</p>
+                <p><strong>Preço:</strong> R$ 2.000,00</p>
+                <p><strong>Parcelamento:</strong> R$ 200,00 em 10x</p>
+                <a href="https://www.magazineluiza.com.br/smart-tv-43-samsung-4k-uhd-crystal-uhd-un43u8600fgxzd-tizen-bixby-3-hdmi/p/240147300/et/tvcr/" target="_blank" rel="noopener noreferrer">Detalhes</a>
+            </li>
+
+            <!-- Produto 2: LG -->
+            <li class="product">
+                <picture>
+                    <source srcset="https://www.lg.com/content/dam/channel/wcms/br/images/produtos/tv/55ut8050psa/2-1600-55ut8050psa-v2.jpg/_jcr_content/renditions/thum-1600x1062.jpeg" media="(max-width: 768px)" />
+                    <img src="https://www.lg.com/content/dam/channel/wcms/br/images/produtos/tv/55ut8050psa/2-1600-55ut8050psa-v2.jpg/_jcr_content/renditions/thum-1600x1062.jpeg" alt="Imagem de televisão marca LG" width="150" />
+                </picture>
+                <h3>LG</h3>
+                <p>TV LG Smart</p>
+                <p><strong>Preço:</strong> R$ 5.000,00</p>
+                <p><strong>Parcelamento:</strong> R$ 500,00 em 10x</p>
+                <a href="https://www.amazon.com.br/Smart-TV-LG-Processor-25-50UA7500PSA/dp/B0F8KGXJ44/" target="_blank" rel="noopener noreferrer">Detalhes</a>
+            </li>
+        </ul>
+    </main>
+
+    <form id="tv-request-form">
+        <fieldset>
+            <legend>Solicitar informações sobre TVs</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Robson Arantes" autocomplete="name" required />
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" autocomplete="email" required />
+            
+            <label for="modelo">Modelo de TV desejado:</label>
+            <input list="modelos-tv" id="modelo" name="modelo" placeholder="Escolha ou digite o modelo" required />
+            <datalist id="modelos-tv">
+                <option value="Samsung">
+                <option value="LG">
+            </datalist>
+
+            <button type="reset">Limpar formulário</button>
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+    <details>
+        <summary>Informações adicionais</summary>
+        <p>Preencha o formulário acima para receber informações sobre os modelos de TVs disponíveis em nossa loja. Entraremos em contato com você o mais breve possível.</p>
+    </details>
 </body>
 
+<footer class="site-footer">
+        <p> 2026 Vendas de TVs e Acessórios. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+
+</html> 
